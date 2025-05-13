@@ -1,0 +1,100 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 217 75% 20%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 220 36% 34%;
+    --secondary-foreground: 210 40% 98%;
+
+    --accent: 351 82% 33%;
+    --accent-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-semibold;
+  }
+  
+  h1 {
+    @apply text-3xl md:text-4xl lg:text-5xl;
+  }
+  
+  h2 {
+    @apply text-2xl md:text-3xl lg:text-4xl;
+  }
+  
+  h3 {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+  
+  h4 {
+    @apply text-lg md:text-xl;
+  }
+}
+
+@layer components {
+  .economiza-container {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-azul-escuro text-white hover:bg-azul-medio py-3 px-6 rounded-md font-medium transition-all duration-300 inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-vinho text-white hover:bg-rosa hover:text-azul-escuro py-3 px-6 rounded-md font-medium transition-all duration-300 inline-block;
+  }
+  
+  .section-title {
+    @apply font-heading text-2xl md:text-3xl lg:text-4xl font-bold text-azul-escuro mb-4;
+  }
+  
+  .section-subtitle {
+    @apply font-heading text-xl md:text-2xl font-semibold text-azul-medio mb-6;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-vinho to-azul-medio bg-clip-text text-transparent;
+  }
+}
